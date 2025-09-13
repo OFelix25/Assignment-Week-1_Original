@@ -126,7 +126,7 @@ def simulate_battle(pokemon1, pokemon2):
 		else:
 			alive = pokemon2.take_damage(pokemon1.attack)
 		if not alive:
-			print(f"💀 {pokemon2.name} fainted! {pokemon1.name} wins!")
+			print(f"{pokemon2.name} fainted! {pokemon1.name} wins!")
 			return pokemon1.name
 
 		# Pokemon2 attacks
@@ -135,7 +135,7 @@ def simulate_battle(pokemon1, pokemon2):
 		else:
 			alive = pokemon1.take_damage(pokemon2.attack)
 		if not alive:
-			print(f"💀 {pokemon1.name} fainted! {pokemon2.name} wins!")
+			print(f"{pokemon1.name} fainted! {pokemon2.name} wins!")
 			return pokemon2.name
 
 # Main Program
@@ -146,10 +146,11 @@ if __name__ == "__main__":
 
 	# 2. Grouping Pokémon by type (dictionary usage)
 	type_groups = group_by_type(pokemons)
-	print("🔥 Fire Pokémon examples:",
+	print("Fire Pokémon examples:",
 		  type_groups.get("Fire", [])[:5])  # Show first 5 Fire-types
 
 	# 3. Simulating a battle between two Pokémon
 	winner = simulate_battle(pokemons[3], pokemons[
 		6])  # Example: 4th vs 7th Pokémon in dataset
-	print("🏆 Winner:", winner)
+
+	print("Winner:", winner)
